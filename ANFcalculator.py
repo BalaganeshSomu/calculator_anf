@@ -1,5 +1,5 @@
 #ANF CALCULATOR
-#BALAGANESH .S & MOHAMMED AYYUB.M
+#BALAGANESH .S 
 
 from tkinter import *
 from tkinter import messagebox
