@@ -1,5 +1,4 @@
 #ANF CALCULATOR
-#BALAGANESH .S 
 
 from tkinter import *
 from tkinter import messagebox
@@ -21,7 +20,7 @@ mb.menu =  Menu ( mb, tearoff = 0 )
 mb["menu"] =  mb.menu
 
 def CREDITS():
-    messagebox.showinfo('CREATED BY:','DONE BY: BALAGANESH.S & MOHAMMED AYYUB.M')
+    messagebox.showinfo('CREATED BY:','DONE BY: BALAGANESH.S')
 
 def HELP():
     messagebox.showinfo('INSTRUCTIONS','1.Enter your boolean expression \n 2.Enter the number of varialbes (1-5) \n 3.Press CALCULATE ')
@@ -89,28 +88,13 @@ def AC():
 
 def calc():
     global x 
-    res=[]
-    xx=[]
-    xx1=[]
-    xx2=[]
     global N
+    bin_value,res=[],[]
     n=N.get()
     if n>=6:
         messagebox.showwarning("WARNING!!!!", "N should be less than 6")        
-    
-
-    for i in range (0,2**n ):
-        xx.append(bin(i))
-
-    for i in xx:
-        xx1.append(i.replace('0b',''))
-
-    for i in xx1:
-            if len(i)!=n:
-                    xx2.append(i.zfill(n))
-            else :
-                    xx2.append(i)
-    for i in xx2:
+    bin_value=[bin(i).replace('0b','').zfill(n) for i in range (0,2**n )]
+    for i in bin_value:
             if n==1:
                     a=int(i[0])
 
